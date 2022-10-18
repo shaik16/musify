@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const DetailsHeader = ({ artistId, artistData, songData }) => {
   const artist = artistData?.artists[artistId].attributes;
@@ -11,7 +11,7 @@ const DetailsHeader = ({ artistId, artistData, songData }) => {
           className="sm:h-48 h-28 rounded-full object-cover border-2 shadow-xl shadow-black"
           src={
             artistId
-              ? artist?.artwork?.url.replace("{w}", "500").replace("{h}", "500")
+              ? artist?.artwork?.url.replace('{w}', '500').replace('{h}', '500')
               : songData?.images.background
           }
           alt="art"
@@ -23,9 +23,7 @@ const DetailsHeader = ({ artistId, artistData, songData }) => {
           </p>
           {!artistId && (
             <Link to={`/artists/${songData?.artists[0].adamid}`}>
-              <p className="text-base text-gray-400 mt-2">
-                {songData?.subtitle}
-              </p>
+              <p className="text-base text-gray-400 mt-2">{songData?.subtitle}</p>
             </Link>
           )}
           <p className="text-base text-gray-400 mt-2">

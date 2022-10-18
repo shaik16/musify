@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/media-has-caption */
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect } from 'react';
 
 const Player = ({
   activeSong,
@@ -9,7 +9,7 @@ const Player = ({
   onEnded,
   onTimeUpdate,
   onLoadedData,
-  repeat,
+  repeat
 }) => {
   const ref = useRef(null);
   // eslint-disable-next-line no-unused-expressions
