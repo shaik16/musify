@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
-import { Loader, SongCard } from '../components'
+import { Error, Loader, SongCard } from '../components'
 import { useGetSongsByCountryQuery } from '../redux/services/shazamCore'
 
 const AroundYou = () => {

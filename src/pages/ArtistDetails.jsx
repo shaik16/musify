@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
-import { DetailsHeader, Loader, RelatedSongs } from '../components'
+import { DetailsHeader, Error, Loader, RelatedSongs } from '../components'
 import { useGetArtistDetailsQuery } from '../redux/services/shazamCore'
 
 const ArtistDetails = () => {
