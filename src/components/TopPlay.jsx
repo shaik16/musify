@@ -63,7 +63,9 @@ const TopPlay = () => {
   };
 
   return (
-    <div ref={divRef} className="xl:ml-6 ml-0 xl:mb-0 mb-6 flex-1 xl:max-w-[500px] max-w-full">
+    <div
+      ref={divRef}
+      className="xl:ml-6 ml-0 xl:mb-0 mb-6 flex-1 xl:max-w-[500px] max-w-full xl:max-h-full xl:overflow-scroll hide-scrollbar">
       <div className="w-full flex flex-col">
         <div className="flex flex-row justify-between items-center">
           <h2 className="text-white font-bold text-2xl">Top Charts</h2>
@@ -102,20 +104,17 @@ const TopPlay = () => {
           centeredSlides
           centeredSlidesBounds
           modules={[FreeMode]}
-          className="mt-4"
-        >
+          className="mt-4">
           {topPlays?.map((song, index) => (
             <SwiperSlide
               key={song?.key}
               style={{ width: '25%', height: 'auto' }}
-              className="shadow-lg rounded-full animate-slideright"
-            >
+              className="shadow-lg rounded-full animate-slideright">
               <Link to={`/artists/${song?.artists[0].adamid}`}>
                 <img
                   src={song?.images.background}
                   alt="artist-img"
-                  className="rounded-full w-full object-cover"
-                ></img>
+                  className="rounded-full w-full object-cover"></img>
               </Link>
             </SwiperSlide>
           ))}
