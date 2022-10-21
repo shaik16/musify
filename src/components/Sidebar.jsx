@@ -7,7 +7,7 @@ import { logo } from '../assets';
 import { links } from '../assets/constants';
 
 const NavLinks = ({ handleClick }) => (
-  <div className="mt-10">
+  <div className="mt-20">
     {links.map((item) => (
       <NavLink
         key={item.name}
@@ -26,7 +26,7 @@ const Sidebar = () => {
   return (
     <>
       <div className="md:flex hidden flex-col w-[240px] py-10 px-4 bg-[#191624] bg-gradient-to-t from-[#060912]  via-[#213348] to-[#144d63]">
-        <img src={logo} alt="logo" className="w-full h-14 object-contain" />
+        <img src={logo} alt="logo" className="absolute w-32 top-0 left-12" />
         <NavLinks />
       </div>
 
@@ -45,10 +45,10 @@ const Sidebar = () => {
       </div>
 
       <div
-        className={`absolute top-0 h-screen w-2/3 bg-gradient-to-tl from-white/10 to-[#484d8b] backdrop-blur-lg z-10 p-6 md:hidden smooth-transition ${
+        className={`absolute top-0 h-screen w-2/3 bg-gradient-to-tl from-[#060912]/10 to-[#144d63] backdrop-blur-lg z-10 p-6 md:hidden smooth-transition ${
           mobileMenuOpen ? 'left-0' : '-left-full'
         } `}>
-        <img src={logo} alt="logo" className="w-full h-14 object-contain" />
+        <img src={logo} alt="logo" className="absolute w-32 top-0 left-12" />
         <NavLinks handleClick={() => setMobileMenuOpen(false)} />
       </div>
     </>
