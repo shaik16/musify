@@ -49,7 +49,7 @@ const TopPlay = () => {
   const divRef = useRef(null);
 
   useEffect(() => {
-    divRef.current.scrollIntoView({ behavior: 'smooth' });
+    // divRef.current.scrollIntoView({ behavior: 'smooth' });
   });
 
   const topPlays = data?.slice(0, 5);

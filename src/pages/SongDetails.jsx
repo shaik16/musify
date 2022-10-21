@@ -42,9 +42,7 @@ const SongDetails = () => {
               </p>
             ))
           ) : (
-            <p key={index} className="text-gray-400 text-base my-1">
-              Sorry, no lyrics found!
-            </p>
+            <p className="text-gray-400 text-base my-1">Sorry, no lyrics found!</p>
           )}
         </div>
       </div>
