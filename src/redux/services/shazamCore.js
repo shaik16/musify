@@ -31,6 +31,14 @@ export const shazamCoreApi = createApi({
     }),
     getSongsByCountry: builder.query({
       query: ({ country }) => `/charts/country?country_code=${country}`
+    }),
+    getSongsBySearch: builder.query({
+      query: (params) => {
+        return {
+          url: '/search/multi',
+          params
+        };
+      }
     })
   })
 });
@@ -41,5 +49,6 @@ export const {
   useGetSongDetailsQuery,
   useGetSongRelatedQuery,
   useGetArtistDetailsQuery,
-  useGetSongsByCountryQuery
+  useGetSongsByCountryQuery,
+  useGetSongsBySearchQuery
 } = shazamCoreApi;
