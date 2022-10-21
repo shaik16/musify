@@ -11,7 +11,7 @@ export const geoLocation = createApi({
         return {
           url: '/country',
           params: {
-            apiKey: 'at_Zlag7NhnHQEVWMuVxP01c9IuljCSD'
+            apiKey: import.meta.env.VITE_GEO_LOCATION_KEY
           }
         };
       }
