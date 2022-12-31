@@ -1,14 +1,9 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Error, Loader, SongCard } from '../components';
-import { useGetCountryQuery } from '../redux/services/geoLocation';
 import { useGetSongsByCountryQuery } from '../redux/services/shazamCore';
 
 const AroundYou = () => {
   const { activeSong, isPlaying } = useSelector((state) => state.player);
-
-  //   const { data: countryData, isFetching: isFetchingCountry } = useGetCountryQuery();
 
   const { data, isFetching, error } = useGetSongsByCountryQuery(
     { country: 'IN' },
