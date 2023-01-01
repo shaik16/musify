@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 const DetailsHeader = ({ artistId, artistData, songData }) => {
-  const artist = artistData?.artists[artistId].attributes;
+  const artist = artistData?.data[0]?.attributes;
   return (
     <div className="relative w-full flex flex-col">
       <div className="w-full bg-gradient-to-l from-transparent to-slate-800 sm:h-48 h-28" />
